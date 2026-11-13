@@ -1,0 +1,8 @@
+{
+  "name": "understanding-ai-demos",
+  "private": true,
+  "type": "module",
+  "description": "Demos zur Videoserie „KI verstehen – vom Token zum Agenten“",
+  "scripts": { "tokens": "node 02-token/tokenize.mjs", "start": "npx -y serve ." },
+  "dependencies": { "gpt-tokenizer": "^4.1.2" }
+}

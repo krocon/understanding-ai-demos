@@ -1,0 +1,36 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Embeddings als Raum – KI verstehen, Folge 3</title><link rel="stylesheet" href="../shared.css">
+<style>
+svg { width:100%; height:auto; display:block; cursor:grab; touch-action:none; user-select:none; } svg:active { cursor:grabbing; }
+.ax { stroke:#6a6c74; stroke-width:3; stroke-linecap:round; } .fl { stroke:#d3d6dc; stroke-width:1.5; } .drop { stroke:rgba(18,18,20,.16); stroke-width:1.5; stroke-dasharray:4 5; }
+text { font:700 19px ui-monospace,Menlo,monospace; fill:var(--ink); paint-order:stroke; stroke:#fff; stroke-width:6px; }
+.legend { display:flex; gap:18px; flex-wrap:wrap; margin-top:10px; font:700 14px ui-monospace,monospace; } .legend i { display:inline-block; width:13px; height:13px; border-radius:50%; margin-right:7px; }
+.link { stroke-width:3.5; stroke-dasharray:3 9; stroke-linecap:round; }
+</style></head><body>
+<div class="kicker">KI verstehen · Folge 3 · Embeddings</div>
+<h1>Bedeutung als Ort im Raum</h1>
+<p class="lead">Jedes Token wird zu einer Liste von Zahlen, einem Vektor. Stell ihn dir als Punkt vor: Was ähnlich verwendet wird, liegt nah beieinander. Ziehe mit der Maus, um den Raum zu drehen.</p>
+<div class="card"><svg id="s" viewBox="0 0 1000 560"></svg>
+<div class="legend"><span><i style="background:var(--green)"></i>Tiere</span><span><i style="background:var(--blue)"></i>Technik</span><span><i style="background:var(--amber)"></i>Essen</span>
+<label style="margin-left:auto"><input type="checkbox" id="spin" checked> langsam drehen</label></div>
+<div class="note">Stark vereinfacht: Hier sind es 3 Dimensionen und von Hand gesetzte Punkte. Echte Modelle arbeiten mit Hunderten bis Tausenden Dimensionen (zum Beispiel 768, 1536 oder 4096), und die Positionen entstehen im Training. Die Zahl 50000 bis 200000 ist etwas anderes: Das ist die Größe des Vokabulars, also die Anzahl der Token.</div></div>
+<script>
+const P = [['Hund',[-.75,.55,.1],0],['Katze',[-.5,.85,.5],0],['Pferd',[-.9,.15,.6],0],['Server',[.55,.5,-.6],1],['Datenbank',[.85,.1,-.2],1],['API',[.35,.9,-.8],1],['Brot',[0,-.55,.85],2],['Käse',[.4,-.25,.95],2]];
+const COL = ['var(--green)','var(--blue)','var(--amber)'], LINKS = [[0,1,'var(--green)'],[0,3,'var(--red)']];
+const svg = document.getElementById('s'); let a = -.55, tilt = .34, drag = null;
+const proj = p => { const x = p[0]*Math.cos(a)+p[2]*Math.sin(a), z = -p[0]*Math.sin(a)+p[2]*Math.cos(a), y = p[1]*Math.cos(tilt)-z*Math.sin(tilt), d = z*Math.cos(tilt)+p[1]*Math.sin(tilt), s = 1/(1-d*.16); return [500+x*300*s, 290-y*200*s, s, d]; };
+const L = (A,B,c,extra='') => { const [x1,y1]=proj(A),[x2,y2]=proj(B); return `<line class="${c}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" ${extra}/>`; };
+function draw() {
+  let h = ''; for (let i = 0; i < 5; i++) { const k = -1+(i+.5)*.4; h += L([k,-1,-1],[k,-1,1],'fl') + L([-1,-1,k],[1,-1,k],'fl'); }
+  h += L([-1,-1,-1],[1.15,-1,-1],'ax') + L([-1,-1,-1],[-1,1.15,-1],'ax') + L([-1,-1,-1],[-1,-1,1.15],'ax');
+  LINKS.forEach(([i,j,c]) => h += L(P[i][1],P[j][1],'link',`style="stroke:${c}"`));
+  [...P].map(p => [p, proj(p[1])]).sort((u,v) => u[1][3]-v[1][3]).forEach(([[l,p,g],[x,y,s]]) => { const [fx,fy] = proj([p[0],-1,p[2]]);
+    h += `<line class="drop" x1="${x}" y1="${y}" x2="${fx}" y2="${fy}"/><circle cx="${x}" cy="${y}" r="${9*s}" fill="${COL[g]}" stroke="#fff" stroke-width="3"/><text x="${x+15}" y="${y+6}">${l}</text>`; });
+  svg.innerHTML = h;
+}
+svg.addEventListener('pointerdown', e => { drag = [e.clientX, e.clientY, a, tilt]; svg.setPointerCapture(e.pointerId); });
+svg.addEventListener('pointermove', e => { if (!drag) return; a = drag[2] + (e.clientX-drag[0])/200; tilt = Math.max(-.2, Math.min(1.1, drag[3] + (e.clientY-drag[1])/300)); draw(); });
+svg.addEventListener('pointerup', () => drag = null);
+let last = 0; (function tick(t) { if (document.getElementById('spin').checked && !drag) { a += (t-last)/9000; draw(); } last = t; requestAnimationFrame(tick); })(0);
+draw();
+</script></body></html>

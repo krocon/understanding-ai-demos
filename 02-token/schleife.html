@@ -1,0 +1,51 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Die Token-Schleife – KI verstehen, Folge 2</title><link rel="stylesheet" href="../shared.css">
+<style>
+.stage { display:grid; grid-template-columns:1.15fr auto 1fr; gap:28px; align-items:start; }
+@media (max-width:860px){ .stage { grid-template-columns:1fr; } .model { justify-self:center; } }
+.cap { font:700 12px/1 ui-monospace,monospace; letter-spacing:.16em; text-transform:uppercase; color:var(--dim); margin-bottom:12px; }
+#tiles { display:flex; flex-wrap:wrap; gap:7px 5px; min-height:110px; } .tk.new { outline:3px solid var(--blue); outline-offset:-3px; animation:pop .45s cubic-bezier(.3,1.5,.5,1); }
+@keyframes pop { from { transform:translateX(60px) scale(.7); opacity:0; } }
+.model { width:150px; height:140px; border-radius:22px; background:var(--blue); color:#fff; display:grid; place-content:center; text-align:center; font:800 26px/1.2 system-ui; margin-top:26px; transition:box-shadow .3s, transform .3s; }
+.model small { display:block; font:700 11px/1 ui-monospace,monospace; letter-spacing:.14em; opacity:.85; margin-top:6px; } .model.on { box-shadow:0 0 0 10px rgba(31,111,178,.25); transform:scale(1.05); }
+.cand { display:grid; grid-template-columns:110px 1fr 54px; gap:12px; align-items:center; padding:7px 12px; border-radius:10px; background:#fff; margin-bottom:8px; transition:opacity .3s; font:700 18px/1 ui-monospace,monospace; }
+.cand i { display:block; height:14px; border-radius:7px; background:#9fb8d3; width:0; transition:width .5s cubic-bezier(.2,.8,.2,1); } .cand .b { background:#e4e7ec; border-radius:7px; overflow:hidden; } .cand span:last-child { text-align:right; color:var(--muted); font-size:15px; }
+.cand.pick { box-shadow:inset 0 0 0 3px var(--blue); } .cand.pick i { background:var(--blue); } .cand.off { opacity:.3; }
+.bar { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin:22px 0 0; } #round { font:700 14px/1 ui-monospace,monospace; letter-spacing:.1em; color:var(--dim); text-transform:uppercase; } #say { color:var(--muted); min-height:1.5em; margin:14px 0 0; }
+</style></head><body>
+<div class="kicker">KI verstehen · Folge 2 · Token</div>
+<h1>Ein Durchlauf, ein Token</h1>
+<p class="lead">Das Modell bekommt alle bisherigen Token, berechnet für jedes Token im Vokabular eine Wahrscheinlichkeit, eines wird ausgewählt und angehängt. Dann beginnt alles von vorn – bis das Ende-Token kommt.</p>
+<div class="card"><div class="stage">
+  <div><div class="cap">Eingabe · alle Token bisher</div><div id="tiles"></div></div>
+  <div class="model" id="model">Modell<small>RECHNET</small></div>
+  <div><div class="cap">Nächstes Token?</div><div id="cands"></div></div>
+</div>
+<div class="bar"><button id="step">Nächster Schritt</button><button class="ghost" id="auto">Automatisch</button><button class="ghost" id="reset">Zurück</button><span id="round"></span></div>
+<p id="say"></p>
+<div class="note">Schema: Die Wahrscheinlichkeiten sind Beispielwerte, nicht aus einem echten Modell. Die Zerlegung „Der · Server · antwort · et“ ist echt (o200k_base).</div></div>
+<script>
+const START = ['Der', ' Server', ' antwort', 'et'];
+const CYCLES = [
+  { cands: [[' nicht', .62], [' nur', .14], [' mit', .09], [' auf', .08], [' langsam', .04]], pick: 0 },
+  { cands: [['.', .58], [' mehr', .19], [',', .11], [' auf', .07], [' richtig', .03]], pick: 0 },
+  { cands: [['<Ende>', .71], [' Bitte', .11], [' Der', .08], [' Das', .06], [' Ich', .02]], pick: 0 } ];
+const SAY = ['Alle bisherigen Token gehen ins Modell.', 'Das Modell berechnet Wahrscheinlichkeiten für das nächste Token.', 'Ein Token wird ausgewählt und hinten angehängt.'];
+const $ = id => document.getElementById(id); let phase = 0, timer = null, toks = [];
+const tile = (p, i, cls = '') => `<span class="tk c${i % 5} ${cls}">${p.startsWith(' ') ? '<span class="sp">·</span>' + p.slice(1) : p.replace('<', '&lt;')}</span>`;
+function draw(newest = false) { $('tiles').innerHTML = toks.map((p, i) => tile(p, i, newest && i === toks.length - 1 ? 'new' : '')).join(''); }
+function reset() { phase = 0; toks = [...START]; draw(); $('cands').innerHTML = ''; $('round').textContent = ''; $('say').textContent = 'Start: 4 Token.'; $('step').disabled = false; }
+function step() {
+  const c = Math.floor(phase / 3), k = phase % 3, cy = CYCLES[c]; if (!cy) return stop();
+  $('round').textContent = 'Durchlauf ' + (c + 1); $('say').textContent = SAY[k];
+  if (k === 0) { $('cands').innerHTML = ''; $('model').classList.add('on'); setTimeout(() => $('model').classList.remove('on'), 600); }
+  if (k === 1) { $('cands').innerHTML = cy.cands.map(([w, p], i) => `<div class="cand${i === cy.pick ? ' pick' : ''}"><span>${w.replace(' ', '·').replace('<', '&lt;')}</span><span class="b"><i data-w="${p * 100}"></i></span><span>${Math.round(p * 100)} %</span></div>`).join(''); requestAnimationFrame(() => document.querySelectorAll('.cand i').forEach(i => i.style.width = i.dataset.w + '%')); }
+  if (k === 2) { document.querySelectorAll('.cand:not(.pick)').forEach(e => e.classList.add('off')); toks.push(cy.cands[cy.pick][0]); draw(true);
+    if (cy.cands[cy.pick][0] === '<Ende>') { $('say').textContent = 'Das Ende-Token wurde gewählt: Das Programm stoppt die Schleife.'; $('step').disabled = true; stop(); } }
+  phase++;
+}
+function stop() { clearInterval(timer); timer = null; $('auto').textContent = 'Automatisch'; }
+$('step').onclick = step; $('reset').onclick = () => { stop(); reset(); };
+$('auto').onclick = () => { if (timer) return stop(); if ($('step').disabled) reset(); $('auto').textContent = 'Anhalten'; timer = setInterval(step, 1100); };
+reset();
+</script></body></html>
