@@ -1,0 +1,69 @@
+{
+  "model": "llama3.2",
+  "prompt": "Moin! Der Build ist",
+  "top": [
+    {
+      "token": " in",
+      "p": 0.08095042086400552
+    },
+    {
+      "token": " im",
+      "p": 0.048078773744584226
+    },
+    {
+      "token": " jetzt",
+      "p": 0.045733412176342185
+    },
+    {
+      "token": " am",
+      "p": 0.04238358860447507
+    },
+    {
+      "token": " gerade",
+      "p": 0.03482032681332334
+    },
+    {
+      "token": " gest",
+      "p": 0.029612480044288052
+    },
+    {
+      "token": " vor",
+      "p": 0.023464147389695884
+    },
+    {
+      "token": " ein",
+      "p": 0.02293251713702571
+    },
+    {
+      "token": " noch",
+      "p": 0.021901108789945858
+    },
+    {
+      "token": " heute",
+      "p": 0.02117810636196355
+    }
+  ],
+  "runs": {
+    "0": [
+      "in vollem Gange! Ich habe mich entschieden",
+      "in vollem Gange! Ich habe mich entschieden",
+      "in vollem Gange! Ich habe mich entschieden",
+      "in vollem Gange! Ich habe mich entschieden",
+      "in vollem Gange! Ich habe mich entschieden"
+    ],
+    "0.7": [
+      "noch nicht fertig, aber ich kann es dir schon jetzt",
+      "gestartet! 🚧 Dieses Projekt besteht",
+      "jetzt live! Ich freue mich darauf, mit Ihnen zu",
+      "im Gange ============================= Das Projekt ist in Or",
+      "in Ordnung! (Hello! The build is fine"
+    ],
+    "1.5": [
+      "für den 30. September 2020 geplant,",
+      "nicht korrekt! Wenn Sie die App „Bald",
+      "ein wichtiger Teil des Projekts! Ich würde gerne",
+      "am Freitag in Potsdam und wir wollen unsere Be",
+      "im Laufe der Jahre zu etwas Bündel und B"
+    ]
+  }
+}

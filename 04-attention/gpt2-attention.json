@@ -1,0 +1,1111 @@
+{
+  "modell": "gpt2 (small)",
+  "satz": "The server does not respond because it is overloaded.",
+  "tokens": [
+    "The",
+    " server",
+    " does",
+    " not",
+    " respond",
+    " because",
+    " it",
+    " is",
+    " overloaded",
+    "."
+  ],
+  "schichten": 12,
+  "koepfe_je_schicht": 12,
+  "gezeigt": {
+    "schicht": 5,
+    "kopf": 4,
+    "von": " it",
+    "nach": " server",
+    "gewicht": 0.7032,
+    "zeile": [
+      0.1927,
+      0.7032,
+      0.0232,
+      0.005,
+      0.0316,
+      0.0267,
+      0.0175
+    ]
+  },
+  "rangliste": [
+    {
+      "schicht": 5,
+      "kopf": 4,
+      "gewicht": 0.7032
+    },
+    {
+      "schicht": 10,
+      "kopf": 1,
+      "gewicht": 0.4039
+    },
+    {
+      "schicht": 7,
+      "kopf": 1,
+      "gewicht": 0.3129
+    },
+    {
+      "schicht": 1,
+      "kopf": 7,
+      "gewicht": 0.2648
+    },
+    {
+      "schicht": 2,
+      "kopf": 7,
+      "gewicht": 0.181
+    },
+    {
+      "schicht": 12,
+      "kopf": 1,
+      "gewicht": 0.1733
+    },
+    {
+      "schicht": 8,
+      "kopf": 9,
+      "gewicht": 0.1707
+    },
+    {
+      "schicht": 4,
+      "kopf": 7,
+      "gewicht": 0.1555
+    },
+    {
+      "schicht": 12,
+      "kopf": 9,
+      "gewicht": 0.151
+    },
+    {
+      "schicht": 12,
+      "kopf": 12,
+      "gewicht": 0.1434
+    },
+    {
+      "schicht": 2,
+      "kopf": 8,
+      "gewicht": 0.1426
+    },
+    {
+      "schicht": 2,
+      "kopf": 11,
+      "gewicht": 0.1424
+    }
+  ],
+  "arten": {
+    "Vorgänger": 2,
+    "Satzanfang": 107,
+    "anderes": 35
+  },
+  "koepfe": [
+    {
+      "schicht": 1,
+      "kopf": 1,
+      "art": "anderes",
+      "vorgaenger": 0.23,
+      "satzanfang": 0.448
+    },
+    {
+      "schicht": 1,
+      "kopf": 2,
+      "art": "anderes",
+      "vorgaenger": 0.002,
+      "satzanfang": 0.002
+    },
+    {
+      "schicht": 1,
+      "kopf": 3,
+      "art": "anderes",
+      "vorgaenger": 0.204,
+      "satzanfang": 0.49
+    },
+    {
+      "schicht": 1,
+      "kopf": 4,
+      "art": "anderes",
+      "vorgaenger": 0.097,
+      "satzanfang": 0.037
+    },
+    {
+      "schicht": 1,
+      "kopf": 5,
+      "art": "anderes",
+      "vorgaenger": 0.252,
+      "satzanfang": 0.164
+    },
+    {
+      "schicht": 1,
+      "kopf": 6,
+      "art": "anderes",
+      "vorgaenger": 0.005,
+      "satzanfang": 0.057
+    },
+    {
+      "schicht": 1,
+      "kopf": 7,
+      "art": "anderes",
+      "vorgaenger": 0.234,
+      "satzanfang": 0.319
+    },
+    {
+      "schicht": 1,
+      "kopf": 8,
+      "art": "anderes",
+      "vorgaenger": 0.332,
+      "satzanfang": 0.299
+    },
+    {
+      "schicht": 1,
+      "kopf": 9,
+      "art": "anderes",
+      "vorgaenger": 0.206,
+      "satzanfang": 0.382
+    },
+    {
+      "schicht": 1,
+      "kopf": 10,
+      "art": "anderes",
+      "vorgaenger": 0.223,
+      "satzanfang": 0.451
+    },
+    {
+      "schicht": 1,
+      "kopf": 11,
+      "art": "anderes",
+      "vorgaenger": 0.154,
+      "satzanfang": 0.382
+    },
+    {
+      "schicht": 1,
+      "kopf": 12,
+      "art": "anderes",
+      "vorgaenger": 0.194,
+      "satzanfang": 0.376
+    },
+    {
+      "schicht": 2,
+      "kopf": 1,
+      "art": "anderes",
+      "vorgaenger": 0.388,
+      "satzanfang": 0.333
+    },
+    {
+      "schicht": 2,
+      "kopf": 2,
+      "art": "Satzanfang",
+      "vorgaenger": 0.249,
+      "satzanfang": 0.528
+    },
+    {
+      "schicht": 2,
+      "kopf": 3,
+      "art": "anderes",
+      "vorgaenger": 0.227,
+      "satzanfang": 0.473
+    },
+    {
+      "schicht": 2,
+      "kopf": 4,
+      "art": "Satzanfang",
+      "vorgaenger": 0.165,
+      "satzanfang": 0.532
+    },
+    {
+      "schicht": 2,
+      "kopf": 5,
+      "art": "Satzanfang",
+      "vorgaenger": 0.182,
+      "satzanfang": 0.609
+    },
+    {
+      "schicht": 2,
+      "kopf": 6,
+      "art": "Satzanfang",
+      "vorgaenger": 0.144,
+      "satzanfang": 0.592
+    },
+    {
+      "schicht": 2,
+      "kopf": 7,
+      "art": "Satzanfang",
+      "vorgaenger": 0.122,
+      "satzanfang": 0.638
+    },
+    {
+      "schicht": 2,
+      "kopf": 8,
+      "art": "Satzanfang",
+      "vorgaenger": 0.17,
+      "satzanfang": 0.567
+    },
+    {
+      "schicht": 2,
+      "kopf": 9,
+      "art": "Satzanfang",
+      "vorgaenger": 0.178,
+      "satzanfang": 0.639
+    },
+    {
+      "schicht": 2,
+      "kopf": 10,
+      "art": "Satzanfang",
+      "vorgaenger": 0.164,
+      "satzanfang": 0.732
+    },
+    {
+      "schicht": 2,
+      "kopf": 11,
+      "art": "anderes",
+      "vorgaenger": 0.218,
+      "satzanfang": 0.001
+    },
+    {
+      "schicht": 2,
+      "kopf": 12,
+      "art": "anderes",
+      "vorgaenger": 0.065,
+      "satzanfang": 0.172
+    },
+    {
+      "schicht": 3,
+      "kopf": 1,
+      "art": "anderes",
+      "vorgaenger": 0.244,
+      "satzanfang": 0.436
+    },
+    {
+      "schicht": 3,
+      "kopf": 2,
+      "art": "Satzanfang",
+      "vorgaenger": 0.141,
+      "satzanfang": 0.817
+    },
+    {
+      "schicht": 3,
+      "kopf": 3,
+      "art": "Vorgänger",
+      "vorgaenger": 0.599,
+      "satzanfang": 0.205
+    },
+    {
+      "schicht": 3,
+      "kopf": 4,
+      "art": "anderes",
+      "vorgaenger": 0.311,
+      "satzanfang": 0.457
+    },
+    {
+      "schicht": 3,
+      "kopf": 5,
+      "art": "Satzanfang",
+      "vorgaenger": 0.312,
+      "satzanfang": 0.583
+    },
+    {
+      "schicht": 3,
+      "kopf": 6,
+      "art": "anderes",
+      "vorgaenger": 0.378,
+      "satzanfang": 0.366
+    },
+    {
+      "schicht": 3,
+      "kopf": 7,
+      "art": "Satzanfang",
+      "vorgaenger": 0.146,
+      "satzanfang": 0.797
+    },
+    {
+      "schicht": 3,
+      "kopf": 8,
+      "art": "anderes",
+      "vorgaenger": 0.258,
+      "satzanfang": 0.307
+    },
+    {
+      "schicht": 3,
+      "kopf": 9,
+      "art": "anderes",
+      "vorgaenger": 0.398,
+      "satzanfang": 0.34
+    },
+    {
+      "schicht": 3,
+      "kopf": 10,
+      "art": "anderes",
+      "vorgaenger": 0.403,
+      "satzanfang": 0.207
+    },
+    {
+      "schicht": 3,
+      "kopf": 11,
+      "art": "anderes",
+      "vorgaenger": 0.219,
+      "satzanfang": 0.448
+    },
+    {
+      "schicht": 3,
+      "kopf": 12,
+      "art": "Satzanfang",
+      "vorgaenger": 0.161,
+      "satzanfang": 0.753
+    },
+    {
+      "schicht": 4,
+      "kopf": 1,
+      "art": "Satzanfang",
+      "vorgaenger": 0.11,
+      "satzanfang": 0.955
+    },
+    {
+      "schicht": 4,
+      "kopf": 2,
+      "art": "Satzanfang",
+      "vorgaenger": 0.175,
+      "satzanfang": 0.715
+    },
+    {
+      "schicht": 4,
+      "kopf": 3,
+      "art": "anderes",
+      "vorgaenger": 0.415,
+      "satzanfang": 0.334
+    },
+    {
+      "schicht": 4,
+      "kopf": 4,
+      "art": "Satzanfang",
+      "vorgaenger": 0.302,
+      "satzanfang": 0.679
+    },
+    {
+      "schicht": 4,
+      "kopf": 5,
+      "art": "Satzanfang",
+      "vorgaenger": 0.118,
+      "satzanfang": 0.953
+    },
+    {
+      "schicht": 4,
+      "kopf": 6,
+      "art": "Satzanfang",
+      "vorgaenger": 0.173,
+      "satzanfang": 0.609
+    },
+    {
+      "schicht": 4,
+      "kopf": 7,
+      "art": "anderes",
+      "vorgaenger": 0.301,
+      "satzanfang": 0.259
+    },
+    {
+      "schicht": 4,
+      "kopf": 8,
+      "art": "anderes",
+      "vorgaenger": 0.432,
+      "satzanfang": 0.372
+    },
+    {
+      "schicht": 4,
+      "kopf": 9,
+      "art": "anderes",
+      "vorgaenger": 0.335,
+      "satzanfang": 0.42
+    },
+    {
+      "schicht": 4,
+      "kopf": 10,
+      "art": "Satzanfang",
+      "vorgaenger": 0.271,
+      "satzanfang": 0.545
+    },
+    {
+      "schicht": 4,
+      "kopf": 11,
+      "art": "Satzanfang",
+      "vorgaenger": 0.149,
+      "satzanfang": 0.793
+    },
+    {
+      "schicht": 4,
+      "kopf": 12,
+      "art": "anderes",
+      "vorgaenger": 0.276,
+      "satzanfang": 0.459
+    },
+    {
+      "schicht": 5,
+      "kopf": 1,
+      "art": "Satzanfang",
+      "vorgaenger": 0.223,
+      "satzanfang": 0.758
+    },
+    {
+      "schicht": 5,
+      "kopf": 2,
+      "art": "Satzanfang",
+      "vorgaenger": 0.245,
+      "satzanfang": 0.585
+    },
+    {
+      "schicht": 5,
+      "kopf": 3,
+      "art": "Satzanfang",
+      "vorgaenger": 0.158,
+      "satzanfang": 0.772
+    },
+    {
+      "schicht": 5,
+      "kopf": 4,
+      "art": "anderes",
+      "vorgaenger": 0.307,
+      "satzanfang": 0.271
+    },
+    {
+      "schicht": 5,
+      "kopf": 5,
+      "art": "Satzanfang",
+      "vorgaenger": 0.173,
+      "satzanfang": 0.755
+    },
+    {
+      "schicht": 5,
+      "kopf": 6,
+      "art": "Satzanfang",
+      "vorgaenger": 0.17,
+      "satzanfang": 0.81
+    },
+    {
+      "schicht": 5,
+      "kopf": 7,
+      "art": "Satzanfang",
+      "vorgaenger": 0.204,
+      "satzanfang": 0.622
+    },
+    {
+      "schicht": 5,
+      "kopf": 8,
+      "art": "anderes",
+      "vorgaenger": 0.202,
+      "satzanfang": 0.392
+    },
+    {
+      "schicht": 5,
+      "kopf": 9,
+      "art": "Satzanfang",
+      "vorgaenger": 0.15,
+      "satzanfang": 0.838
+    },
+    {
+      "schicht": 5,
+      "kopf": 10,
+      "art": "Satzanfang",
+      "vorgaenger": 0.259,
+      "satzanfang": 0.502
+    },
+    {
+      "schicht": 5,
+      "kopf": 11,
+      "art": "Satzanfang",
+      "vorgaenger": 0.12,
+      "satzanfang": 0.926
+    },
+    {
+      "schicht": 5,
+      "kopf": 12,
+      "art": "Vorgänger",
+      "vorgaenger": 0.999,
+      "satzanfang": 0.111
+    },
+    {
+      "schicht": 6,
+      "kopf": 1,
+      "art": "Satzanfang",
+      "vorgaenger": 0.123,
+      "satzanfang": 0.94
+    },
+    {
+      "schicht": 6,
+      "kopf": 2,
+      "art": "Satzanfang",
+      "vorgaenger": 0.111,
+      "satzanfang": 0.996
+    },
+    {
+      "schicht": 6,
+      "kopf": 3,
+      "art": "Satzanfang",
+      "vorgaenger": 0.237,
+      "satzanfang": 0.641
+    },
+    {
+      "schicht": 6,
+      "kopf": 4,
+      "art": "Satzanfang",
+      "vorgaenger": 0.19,
+      "satzanfang": 0.564
+    },
+    {
+      "schicht": 6,
+      "kopf": 5,
+      "art": "Satzanfang",
+      "vorgaenger": 0.229,
+      "satzanfang": 0.722
+    },
+    {
+      "schicht": 6,
+      "kopf": 6,
+      "art": "Satzanfang",
+      "vorgaenger": 0.116,
+      "satzanfang": 0.934
+    },
+    {
+      "schicht": 6,
+      "kopf": 7,
+      "art": "Satzanfang",
+      "vorgaenger": 0.22,
+      "satzanfang": 0.77
+    },
+    {
+      "schicht": 6,
+      "kopf": 8,
+      "art": "Satzanfang",
+      "vorgaenger": 0.172,
+      "satzanfang": 0.803
+    },
+    {
+      "schicht": 6,
+      "kopf": 9,
+      "art": "Satzanfang",
+      "vorgaenger": 0.131,
+      "satzanfang": 0.861
+    },
+    {
+      "schicht": 6,
+      "kopf": 10,
+      "art": "Satzanfang",
+      "vorgaenger": 0.132,
+      "satzanfang": 0.906
+    },
+    {
+      "schicht": 6,
+      "kopf": 11,
+      "art": "anderes",
+      "vorgaenger": 0.232,
+      "satzanfang": 0.492
+    },
+    {
+      "schicht": 6,
+      "kopf": 12,
+      "art": "Satzanfang",
+      "vorgaenger": 0.133,
+      "satzanfang": 0.819
+    },
+    {
+      "schicht": 7,
+      "kopf": 1,
+      "art": "anderes",
+      "vorgaenger": 0.27,
+      "satzanfang": 0.374
+    },
+    {
+      "schicht": 7,
+      "kopf": 2,
+      "art": "Satzanfang",
+      "vorgaenger": 0.123,
+      "satzanfang": 0.903
+    },
+    {
+      "schicht": 7,
+      "kopf": 3,
+      "art": "Satzanfang",
+      "vorgaenger": 0.134,
+      "satzanfang": 0.831
+    },
+    {
+      "schicht": 7,
+      "kopf": 4,
+      "art": "Satzanfang",
+      "vorgaenger": 0.148,
+      "satzanfang": 0.768
+    },
+    {
+      "schicht": 7,
+      "kopf": 5,
+      "art": "Satzanfang",
+      "vorgaenger": 0.182,
+      "satzanfang": 0.619
+    },
+    {
+      "schicht": 7,
+      "kopf": 6,
+      "art": "Satzanfang",
+      "vorgaenger": 0.177,
+      "satzanfang": 0.718
+    },
+    {
+      "schicht": 7,
+      "kopf": 7,
+      "art": "Satzanfang",
+      "vorgaenger": 0.124,
+      "satzanfang": 0.855
+    },
+    {
+      "schicht": 7,
+      "kopf": 8,
+      "art": "Satzanfang",
+      "vorgaenger": 0.212,
+      "satzanfang": 0.611
+    },
+    {
+      "schicht": 7,
+      "kopf": 9,
+      "art": "Satzanfang",
+      "vorgaenger": 0.323,
+      "satzanfang": 0.58
+    },
+    {
+      "schicht": 7,
+      "kopf": 10,
+      "art": "Satzanfang",
+      "vorgaenger": 0.112,
+      "satzanfang": 0.99
+    },
+    {
+      "schicht": 7,
+      "kopf": 11,
+      "art": "Satzanfang",
+      "vorgaenger": 0.118,
+      "satzanfang": 0.956
+    },
+    {
+      "schicht": 7,
+      "kopf": 12,
+      "art": "Satzanfang",
+      "vorgaenger": 0.238,
+      "satzanfang": 0.624
+    },
+    {
+      "schicht": 8,
+      "kopf": 1,
+      "art": "Satzanfang",
+      "vorgaenger": 0.272,
+      "satzanfang": 0.742
+    },
+    {
+      "schicht": 8,
+      "kopf": 2,
+      "art": "Satzanfang",
+      "vorgaenger": 0.12,
+      "satzanfang": 0.917
+    },
+    {
+      "schicht": 8,
+      "kopf": 3,
+      "art": "Satzanfang",
+      "vorgaenger": 0.111,
+      "satzanfang": 0.996
+    },
+    {
+      "schicht": 8,
+      "kopf": 4,
+      "art": "Satzanfang",
+      "vorgaenger": 0.171,
+      "satzanfang": 0.694
+    },
+    {
+      "schicht": 8,
+      "kopf": 5,
+      "art": "Satzanfang",
+      "vorgaenger": 0.146,
+      "satzanfang": 0.82
+    },
+    {
+      "schicht": 8,
+      "kopf": 6,
+      "art": "Satzanfang",
+      "vorgaenger": 0.152,
+      "satzanfang": 0.83
+    },
+    {
+      "schicht": 8,
+      "kopf": 7,
+      "art": "Satzanfang",
+      "vorgaenger": 0.128,
+      "satzanfang": 0.881
+    },
+    {
+      "schicht": 8,
+      "kopf": 8,
+      "art": "Satzanfang",
+      "vorgaenger": 0.113,
+      "satzanfang": 0.967
+    },
+    {
+      "schicht": 8,
+      "kopf": 9,
+      "art": "Satzanfang",
+      "vorgaenger": 0.218,
+      "satzanfang": 0.634
+    },
+    {
+      "schicht": 8,
+      "kopf": 10,
+      "art": "Satzanfang",
+      "vorgaenger": 0.199,
+      "satzanfang": 0.69
+    },
+    {
+      "schicht": 8,
+      "kopf": 11,
+      "art": "Satzanfang",
+      "vorgaenger": 0.115,
+      "satzanfang": 0.983
+    },
+    {
+      "schicht": 8,
+      "kopf": 12,
+      "art": "Satzanfang",
+      "vorgaenger": 0.115,
+      "satzanfang": 0.92
+    },
+    {
+      "schicht": 9,
+      "kopf": 1,
+      "art": "Satzanfang",
+      "vorgaenger": 0.132,
+      "satzanfang": 0.829
+    },
+    {
+      "schicht": 9,
+      "kopf": 2,
+      "art": "Satzanfang",
+      "vorgaenger": 0.114,
+      "satzanfang": 0.965
+    },
+    {
+      "schicht": 9,
+      "kopf": 3,
+      "art": "Satzanfang",
+      "vorgaenger": 0.142,
+      "satzanfang": 0.77
+    },
+    {
+      "schicht": 9,
+      "kopf": 4,
+      "art": "Satzanfang",
+      "vorgaenger": 0.121,
+      "satzanfang": 0.908
+    },
+    {
+      "schicht": 9,
+      "kopf": 5,
+      "art": "Satzanfang",
+      "vorgaenger": 0.222,
+      "satzanfang": 0.712
+    },
+    {
+      "schicht": 9,
+      "kopf": 6,
+      "art": "anderes",
+      "vorgaenger": 0.282,
+      "satzanfang": 0.483
+    },
+    {
+      "schicht": 9,
+      "kopf": 7,
+      "art": "Satzanfang",
+      "vorgaenger": 0.153,
+      "satzanfang": 0.848
+    },
+    {
+      "schicht": 9,
+      "kopf": 8,
+      "art": "Satzanfang",
+      "vorgaenger": 0.263,
+      "satzanfang": 0.719
+    },
+    {
+      "schicht": 9,
+      "kopf": 9,
+      "art": "Satzanfang",
+      "vorgaenger": 0.213,
+      "satzanfang": 0.504
+    },
+    {
+      "schicht": 9,
+      "kopf": 10,
+      "art": "Satzanfang",
+      "vorgaenger": 0.137,
+      "satzanfang": 0.784
+    },
+    {
+      "schicht": 9,
+      "kopf": 11,
+      "art": "Satzanfang",
+      "vorgaenger": 0.14,
+      "satzanfang": 0.744
+    },
+    {
+      "schicht": 9,
+      "kopf": 12,
+      "art": "Satzanfang",
+      "vorgaenger": 0.128,
+      "satzanfang": 0.924
+    },
+    {
+      "schicht": 10,
+      "kopf": 1,
+      "art": "Satzanfang",
+      "vorgaenger": 0.161,
+      "satzanfang": 0.652
+    },
+    {
+      "schicht": 10,
+      "kopf": 2,
+      "art": "Satzanfang",
+      "vorgaenger": 0.116,
+      "satzanfang": 0.96
+    },
+    {
+      "schicht": 10,
+      "kopf": 3,
+      "art": "Satzanfang",
+      "vorgaenger": 0.151,
+      "satzanfang": 0.808
+    },
+    {
+      "schicht": 10,
+      "kopf": 4,
+      "art": "Satzanfang",
+      "vorgaenger": 0.273,
+      "satzanfang": 0.608
+    },
+    {
+      "schicht": 10,
+      "kopf": 5,
+      "art": "Satzanfang",
+      "vorgaenger": 0.123,
+      "satzanfang": 0.906
+    },
+    {
+      "schicht": 10,
+      "kopf": 6,
+      "art": "Satzanfang",
+      "vorgaenger": 0.141,
+      "satzanfang": 0.86
+    },
+    {
+      "schicht": 10,
+      "kopf": 7,
+      "art": "Satzanfang",
+      "vorgaenger": 0.116,
+      "satzanfang": 0.962
+    },
+    {
+      "schicht": 10,
+      "kopf": 8,
+      "art": "Satzanfang",
+      "vorgaenger": 0.141,
+      "satzanfang": 0.789
+    },
+    {
+      "schicht": 10,
+      "kopf": 9,
+      "art": "Satzanfang",
+      "vorgaenger": 0.126,
+      "satzanfang": 0.883
+    },
+    {
+      "schicht": 10,
+      "kopf": 10,
+      "art": "Satzanfang",
+      "vorgaenger": 0.116,
+      "satzanfang": 0.966
+    },
+    {
+      "schicht": 10,
+      "kopf": 11,
+      "art": "Satzanfang",
+      "vorgaenger": 0.251,
+      "satzanfang": 0.694
+    },
+    {
+      "schicht": 10,
+      "kopf": 12,
+      "art": "Satzanfang",
+      "vorgaenger": 0.112,
+      "satzanfang": 0.984
+    },
+    {
+      "schicht": 11,
+      "kopf": 1,
+      "art": "Satzanfang",
+      "vorgaenger": 0.126,
+      "satzanfang": 0.882
+    },
+    {
+      "schicht": 11,
+      "kopf": 2,
+      "art": "Satzanfang",
+      "vorgaenger": 0.133,
+      "satzanfang": 0.941
+    },
+    {
+      "schicht": 11,
+      "kopf": 3,
+      "art": "Satzanfang",
+      "vorgaenger": 0.121,
+      "satzanfang": 0.926
+    },
+    {
+      "schicht": 11,
+      "kopf": 4,
+      "art": "Satzanfang",
+      "vorgaenger": 0.118,
+      "satzanfang": 0.93
+    },
+    {
+      "schicht": 11,
+      "kopf": 5,
+      "art": "Satzanfang",
+      "vorgaenger": 0.16,
+      "satzanfang": 0.794
+    },
+    {
+      "schicht": 11,
+      "kopf": 6,
+      "art": "Satzanfang",
+      "vorgaenger": 0.173,
+      "satzanfang": 0.749
+    },
+    {
+      "schicht": 11,
+      "kopf": 7,
+      "art": "Satzanfang",
+      "vorgaenger": 0.118,
+      "satzanfang": 0.913
+    },
+    {
+      "schicht": 11,
+      "kopf": 8,
+      "art": "Satzanfang",
+      "vorgaenger": 0.118,
+      "satzanfang": 0.817
+    },
+    {
+      "schicht": 11,
+      "kopf": 9,
+      "art": "Satzanfang",
+      "vorgaenger": 0.113,
+      "satzanfang": 0.959
+    },
+    {
+      "schicht": 11,
+      "kopf": 10,
+      "art": "Satzanfang",
+      "vorgaenger": 0.165,
+      "satzanfang": 0.727
+    },
+    {
+      "schicht": 11,
+      "kopf": 11,
+      "art": "Satzanfang",
+      "vorgaenger": 0.12,
+      "satzanfang": 0.96
+    },
+    {
+      "schicht": 11,
+      "kopf": 12,
+      "art": "Satzanfang",
+      "vorgaenger": 0.146,
+      "satzanfang": 0.893
+    },
+    {
+      "schicht": 12,
+      "kopf": 1,
+      "art": "anderes",
+      "vorgaenger": 0.21,
+      "satzanfang": 0.331
+    },
+    {
+      "schicht": 12,
+      "kopf": 2,
+      "art": "Satzanfang",
+      "vorgaenger": 0.129,
+      "satzanfang": 0.861
+    },
+    {
+      "schicht": 12,
+      "kopf": 3,
+      "art": "Satzanfang",
+      "vorgaenger": 0.116,
+      "satzanfang": 0.935
+    },
+    {
+      "schicht": 12,
+      "kopf": 4,
+      "art": "Satzanfang",
+      "vorgaenger": 0.192,
+      "satzanfang": 0.638
+    },
+    {
+      "schicht": 12,
+      "kopf": 5,
+      "art": "Satzanfang",
+      "vorgaenger": 0.145,
+      "satzanfang": 0.792
+    },
+    {
+      "schicht": 12,
+      "kopf": 6,
+      "art": "Satzanfang",
+      "vorgaenger": 0.121,
+      "satzanfang": 0.911
+    },
+    {
+      "schicht": 12,
+      "kopf": 7,
+      "art": "Satzanfang",
+      "vorgaenger": 0.119,
+      "satzanfang": 0.952
+    },
+    {
+      "schicht": 12,
+      "kopf": 8,
+      "art": "Satzanfang",
+      "vorgaenger": 0.124,
+      "satzanfang": 0.866
+    },
+    {
+      "schicht": 12,
+      "kopf": 9,
+      "art": "anderes",
+      "vorgaenger": 0.208,
+      "satzanfang": 0.0
+    },
+    {
+      "schicht": 12,
+      "kopf": 10,
+      "art": "Satzanfang",
+      "vorgaenger": 0.124,
+      "satzanfang": 0.952
+    },
+    {
+      "schicht": 12,
+      "kopf": 11,
+      "art": "Satzanfang",
+      "vorgaenger": 0.154,
+      "satzanfang": 0.673
+    },
+    {
+      "schicht": 12,
+      "kopf": 12,
+      "art": "Satzanfang",
+      "vorgaenger": 0.234,
+      "satzanfang": 0.531
+    }
+  ]
+}

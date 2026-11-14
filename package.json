@@ -3,6 +3,17 @@
   "private": true,
   "type": "module",
   "description": "Demos zur Videoserie „KI verstehen – vom Token zum Agenten“",
-  "scripts": { "tokens": "node 02-token/tokenize.mjs", "start": "npx -y serve ." },
-  "dependencies": { "gpt-tokenizer": "^4.1.2" }
+  "scripts": {
+    "tokens": "node 02-token/tokenize.mjs",
+    "start": "npx -y serve .",
+    "begriffe": "node 03-embeddings/begriffe.mjs",
+    "begriffe:vergleich": "node 03-embeddings/begriffe-vergleich.mjs",
+    "begriffe:gruppen": "node 03-embeddings/begriffe-gruppen.mjs",
+    "attention": "node 04-attention/mini-attention.mjs",
+    "training": "node 05-training/mini-netz.mjs",
+    "wahrscheinlichkeit": "node 06-wahrscheinlichkeit/naechstes-token.mjs"
+  },
+  "dependencies": {
+    "gpt-tokenizer": "^4.1.2"
+  }
 }
